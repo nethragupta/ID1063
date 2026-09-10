@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+import os
 # Define the function and its derivative
 def f(x):
     return np.exp(x) - 2
@@ -50,5 +50,9 @@ plt.xlabel("x")
 plt.ylabel("f(x)")
 plt.legend()
 plt.grid(True)
-plt.savefig('/sdcard/Download/bt331.jpg')
+#plt.savefig('/sdcard/Download/bt331.jpg')
+# Save the plot image
+plt.savefig("plot.pdf", bbox_inches="tight", dpi=300)
+os.system("termux-open plot.pdf")
+print("Plot saved as plot.pdf")
 
