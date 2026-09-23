@@ -6,7 +6,7 @@ int firstStable(double a[], int n, double tol)
 {
     int i;
     for (i = 0; i < n-1; i++)
-        if (fabs(a[i+1]-a[i]) <= tol)   // difference small enough
+        if (fabs(a[i+1]-a[i]) <= tol + 1e-9)   // difference small enough
             return i;
     return -1;   // never got within tolerance
 }
