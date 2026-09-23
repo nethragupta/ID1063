@@ -13,6 +13,7 @@ int days_elapsed(int d,int m)
 int main()
 {
     int d, m;
+    printf("Enter day and month : \n");
     scanf("%d %d", &d, &m);
     printf("%d\n",days_elapsed(d, m));
     return 0;
